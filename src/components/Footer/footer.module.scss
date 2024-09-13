@@ -1,0 +1,93 @@
+.outerbox {
+  display: flex;               // Enables Flexbox
+  justify-content: center;     // Centers content horizontally
+  background-color: #021526;
+}
+
+
+.footer {
+    background-color: #181C14; // Darker background for better contrast
+    color: #fff;
+    padding: 3rem 0; // Increased padding for a more spacious look
+    font-family: 'Roboto', Arial, sans-serif;
+    width: 90%;
+    border-radius: 30px 30px 0px 0px;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem; // Slightly wider padding for larger screens
+    }
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .col {
+      flex: 1;
+      min-width: 250px; // Slightly larger for more space
+      margin-bottom: 2rem; // Increased margin to improve spacing
+  
+      h3 {
+        font-size: 1.4rem; // Larger font size for headings
+        margin-bottom: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em; // Small letter spacing for headings
+        color: #f0f0f0; // Slightly lighter color for better readability
+      }
+  
+      p, a {
+        font-size: 1rem; // Increased base font size for better readability
+        line-height: 1.6; // Added line-height for better text flow
+        color: #ccc; // Slightly lighter color for text
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 0.8rem; // Added space between list items
+  
+          a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+  
+            &:hover {
+              color: #ffab00; // Bright hover color for links
+              text-decoration: underline; // Added underline on hover for better UX
+            }
+          }
+        }
+      }
+    }
+  
+    .bottomBar {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.85rem; // Slightly smaller font size
+      color: #bbb; // Muted text color for copyright
+      border-top: 1px solid #444; // Added a top border for visual separation
+      padding-top: 1rem;
+    }
+  
+    // Responsive design
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+  
+      .col {
+        margin-bottom: 2.5rem; // Increased margin between columns on mobile
+      }
+    }
+  
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .col {
+        min-width: 300px; // Adjust column width for tablet screens
+      }
+    }
+}
