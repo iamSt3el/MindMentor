@@ -12,7 +12,7 @@ function Navbar() {
         <div className={styles.actions}>
           <button className={styles.button}>Get Started</button>
           <div className={styles.userIcon}>
-            <User />
+            {/*<User />*/}
           </div>
         </div>
       </div>

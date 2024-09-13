@@ -1,0 +1,64 @@
+// FeatureSection.module.scss
+
+.featureSection {
+    padding: 4rem 4rem;
+    background-color: #021526; // Dark background to match the design
+
+    h2 {
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.featureCards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.featureCard {
+    box-shadow: rgba(154, 143, 143, 0.35) 0px 5px 15px;
+    background-color: #1A2B3C; // Slightly lighter than the background
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .icon {
+        color: #32CD32; // Green color from the design
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.actionButton {
+    background-color: #32CD32;
+    color: #0D1117;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken(#32CD32, 10%);
+    }
+}
