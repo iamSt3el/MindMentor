@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./navbar.module.scss";
-import { User } from "lucide-react";
+import { User, LogIn } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -14,10 +14,11 @@ function Navbar() {
         </div>
         <div className={styles.actions}>
           <button className={styles.button} onClick={() => navigate('/login')}>
-            Login
+            <LogIn className={styles.icon} /> Login
           </button>
+
           <button className={styles.button} onClick={() => navigate('/homepage')}>
-            Get Started
+            My Test
           </button>
           <div className={styles.userIcon}>
             {/*<User />*/}

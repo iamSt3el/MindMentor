@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Youtube, BookOpen, Brain, BarChart2, Map, Plus, Search, Bell, User } from 'lucide-react';
+import { FileText, Youtube, BookOpen, Brain, BarChart2, Map, Plus, Search, Bell, User, LogOut } from 'lucide-react';
 import styles from './homepage.module.scss';
 
 const SourceCard = ({ icon: Icon, title, description, onClick, gradient }) => (
@@ -34,7 +34,7 @@ const MainPage = () => {
             <div className={styles.searchInput}>
             </div>
             <button className={`${styles.btn} ${styles.btnprimary}`}>
-              <Plus className={styles.btn__icon} /> Create Test
+              <LogOut className={styles.btn__icon} /> Logout
             </button>
             <div className={styles.notifications}>
               <Bell 
