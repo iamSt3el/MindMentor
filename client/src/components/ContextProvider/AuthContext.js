@@ -1,10 +1,9 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
-
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-    const API_URL = 'http://localhost:4000'
+  const API_URL = 'http://localhost:4000'
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -33,13 +32,12 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = async (username, password) => {
-    console.log(API_URL)
+  const register = async (username, email, password) => {
     try {
       const response = await fetch(`${API_URL}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, email, password }),
         credentials: "include",
       });
       if (response.ok) {
@@ -58,12 +56,34 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (username, password) => {
-    console.log(API_URL)
     try {
       const response = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
+        credentials: "include",
+      });
+      if (response.ok) {
+        const userData = await response.json();
+        setUser(userData);
+        setIsAuthenticated(true);
+        return { success: true };
+      } else {
+        const errorData = await response.json();
+        return { success: false, error: errorData.error };
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      return { success: false, error: "An error occurred during login" };
+    }
+  };
+
+  const loginWithEmail = async (email, password) => {
+    try {
+      const response = await fetch(`${API_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
         credentials: "include",
       });
       if (response.ok) {
@@ -96,7 +116,15 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, loading, isAuthenticated, register, login, logout }}
+      value={{ 
+        user, 
+        loading, 
+        isAuthenticated, 
+        register, 
+        login, 
+        loginWithEmail, 
+        logout 
+      }}
     >
       {children}
     </AuthContext.Provider>
