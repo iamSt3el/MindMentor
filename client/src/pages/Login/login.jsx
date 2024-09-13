@@ -9,11 +9,11 @@ const Login = () => {
         <h1 className={styles.head}>Mind Mentor</h1>
         <h3 className={styles.title}>Login</h3>
         <div className={styles.inputGroup}>
-          <input type="email" id="email" required />
+          <input type="email" id="email" placeholder="" required />
           <label htmlFor="email" className={styles.label}>Email</label>
         </div>
         <div className={styles.inputGroup}>
-          <input type="password" id="password" required />
+          <input type="password" id="password" placeholder=""required />
           <label htmlFor="password" className={styles.label}>Password</label>
         </div>
         <button className={styles.button}>Login</button>

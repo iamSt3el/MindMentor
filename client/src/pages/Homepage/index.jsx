@@ -29,7 +29,7 @@ const MainPage = () => {
     <div className={styles.app}>
       <header className={styles.header}>
         <div className={`${styles.container} ${styles.headercontent}`}>
-          <h1 className={styles.headertitle}>MindMentor</h1>
+          <h1 className={styles.logo}><a href='/'>Mind Mentor</a></h1>
           <div className={styles.headeractions}>
             <div className={styles.searchInput}>
             </div>

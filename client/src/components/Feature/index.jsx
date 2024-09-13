@@ -17,21 +17,22 @@ const FeatureSection = () => {
         <section className={styles.featureSection}>
             <h2 className={styles.sectionTitle}>Core Features of MindMentor</h2>
             <div className={styles.featureCards}>
-                <FeatureCard 
+                <FeatureCard
                     icon={FileText}
                     title="Notes to Tests"
-                    description="Transform your notes into comprehensive tests with AI-powered analysis. Our advanced algorithms analyze your study materials to create relevant and challenging questions, helping you reinforce your learning and identify areas for improvement."
+                    description="Convert your notes into tests using AI-driven analysis to help reinforce learning and identify areas for improvement."
                 />
-                <FeatureCard 
+                <FeatureCard
                     icon={Youtube}
                     title="Video Learning"
-                    description="Create tests from YouTube videos to reinforce your understanding of visual content. Simply provide a video URL, and our system will generate quizzes based on the video's content, allowing you to test your comprehension of lectures, tutorials, and educational content."
+                    description="Generate quizzes from YouTube videos. Provide a video URL, and we'll create questions to test your comprehension."
                 />
-                <FeatureCard 
+                <FeatureCard
                     icon={BarChart2}
                     title="Performance Tracking"
-                    description="Monitor your progress with detailed analytics and personalized insights. Our performance tracking feature provides in-depth analysis of your test results, learning patterns, and improvement over time, helping you optimize your study strategies and achieve your educational goals."
+                    description="Track your progress with analytics and personalized insights, helping you optimize your study and reach your goals."
                 />
+
             </div>
         </section>
     );

@@ -10,7 +10,7 @@ function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <h1>MindMentor</h1>
+          <h1><a href="/">Mind Mentor</a></h1>
         </div>
         <div className={styles.actions}>
           <button className={styles.button} onClick={() => navigate('/login')}>
