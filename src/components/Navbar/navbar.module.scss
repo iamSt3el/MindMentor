@@ -3,10 +3,10 @@
 // Variables
 $primary-color: #4ADE80;
 $text-color: white;
-$background-color: #181C14;
+$background-color: #1a202c;
 
 .navbar {
-  background-color: $background-color;
+  background-color: darken($background-color, 5%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
 }
