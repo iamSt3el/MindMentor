@@ -13,6 +13,9 @@ function Navbar() {
           <h1>MindMentor</h1>
         </div>
         <div className={styles.actions}>
+          <button className={styles.button} onClick={() => navigate('/login')}>
+            Login
+          </button>
           <button className={styles.button} onClick={() => navigate('/homepage')}>
             Get Started
           </button>
