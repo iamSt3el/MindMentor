@@ -1,12 +1,20 @@
-import React from 'react';
-import './App.css';
-import Homepage from './pages/Homepage';
-import Intro from './pages/Intropage';
+import React from "react";
+import "./App.css";
+import Intro from "./pages/Intropage";
+import MainPage from "./pages/Homepage";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Intro/>
+      {
+       <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/homepage" element={<MainPage />} />
+          </Routes>
+        </BrowserRouter>
+      }
     </div>
   );
 }

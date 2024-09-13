@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./navbar.module.scss";
 import { User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -10,7 +13,9 @@ function Navbar() {
           <h1>MindMentor</h1>
         </div>
         <div className={styles.actions}>
-          <button className={styles.button}>Get Started</button>
+          <button className={styles.button} onClick={() => navigate('/homepage')}>
+            Get Started
+          </button>
           <div className={styles.userIcon}>
             {/*<User />*/}
           </div>
