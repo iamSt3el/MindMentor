@@ -1,0 +1,61 @@
+// Navbar.module.scss
+
+// Variables
+$primary-color: #3498db;
+$text-color: white;
+$background-color: #181C14;
+
+.navbar {
+  background-color: $background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $text-color;
+    margin: 0;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.userIcon {
+  cursor: pointer;
+  
+  svg {
+    width: 30px;
+    height: 30px;
+    color: $text-color;
+  }
+}
